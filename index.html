@@ -3,7 +3,18 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <script src="js/main.js"></script>
+    <link rel='stylesheet' href='css/main.css.scss'
   </head>
   <body>
+
+    <div ng-controller="ParentController">
+      <div ng-controller="ChildController">
+        <input type="text" ng-model="person.name" placeholder="A name"></input>
+        <a class="button" ng-click="sayHello()">Say hello</a>
+        <a class="button" ng-click="reset()">Reset</a>
+      </div>
+      {{ person }}
+    </div>
+
   </body>
 </html>
