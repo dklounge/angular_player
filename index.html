@@ -7,13 +7,14 @@
   </head>
   <body>
 
-    <div ng-controller="ParentController">
-      <div ng-controller="ChildController">
-        <input type="text" ng-model="person.name" placeholder="A name"></input>
-        <a class="button" ng-click="sayHello()">Say hello</a>
-        <a class="button" ng-click="reset()">Reset</a>
+    <div ng-controller="PlayerController">
+
+      <button ng-click="play()" class="buton" ng-show="!playing">Play</button>
+      <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
+      Playing audio: <b>{{playing}}</b>
+
+      <div ng-controller="RelatedController">
       </div>
-      {{ person }}
     </div>
 
   </body>
