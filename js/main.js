@@ -23,6 +23,13 @@ app.controller('PlayerController', ['$scope', function ($scope) {
   });
 }]);
 
-app.controller('RelatedController', ['$scope', function ($scope) {
-
-}]);
+app.controller('MyController', function ($scope) {
+  $scope.person = {name: "david"}
+  var updateClock = function () {
+    $scope.clock = new Date();
+  };
+  var tickTock = setInterval(function () {
+    $scope.$apply(updateClock);
+  }, 1000);
+  updateClock();
+});
