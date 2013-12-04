@@ -3,7 +3,7 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <script src="js/main.js"></script>
-    <link rel='stylesheet' href='css/main.css.scss'
+    <link rel='stylesheet' href='css/main.css.scss'>
   </head>
   <body>
 
@@ -13,7 +13,10 @@
       <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
       Playing audio: <b>{{playing}}</b>
 
-      <div ng-controller="RelatedController">
+      <div ng-controller="MyController">
+        <input type='text' ng-model='person.name' placeholder='enter name' />
+        <h5>Hi {{ person.name }}</h5>
+        <h5>Time is {{ clock }}</h5>
       </div>
     </div>
 
